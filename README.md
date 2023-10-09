@@ -42,7 +42,7 @@ Users should:
 
 ### Links
 
-- Live Site URL: [https://motlakz.github.io/multi-step-form](https://motlakz.github.io/multi-step-form)
+- Live Site URL: [https://motlakz.github.io/responsive-web-starter](https://motlakz.github.io/responsive-web-starter)
 
 ## My process
 
