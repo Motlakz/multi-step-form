@@ -38,7 +38,7 @@ Users should:
 
 ### Screenshot
 
-![Screenshot of form]("C:\Users\User\Downloads\multi-step-form\images\2023-10-09 21_30_03-Multi Step Form.png")
+![Screenshot of form]("/images/2023-10-09 21_30_03-Multi Step Form.png")
 
 ### Links
 
