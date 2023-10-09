@@ -1,130 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
 
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-/* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
+    background: #121826;
+    color: #E5E7EB;
     font-family: 'Sora', sans-serif;
     line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
     padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
 }
-
-header {
+.container {
     display: flex;
-    justify-content: space-between;
-
-}
-
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+}
+form {
+    background-color: #212936;
+    border-radius: 10px;
+    border: 1px solid #4D5562;
+    display: grid;
+    gap: 20px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+legend {
+    font-size: 20px;
+}
+form label, p {
+    color:#A1A1A9;
 }
 
-.title {
-    position: relative;
-    text-align: center;
+form input {
+    background-color: inherit;
+    border: 2px solid #4D5562;
+    color: #E5E7EB;
+    cursor: pointer;
+    border-radius: 12px;
+    outline: #652cd1;
+    padding: 15px;
+    width: 100%;
+}
+form input:focus-visible {
+    border-color: #652cd1;
 }
 
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+form button {
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(101,44,209,1) 1%, rgba(132,94,238,1) 50%);
+    border-radius: 30px;
+    border: none;
+    letter-spacing: 0.0365rem;
+    color: #E5E7EB;
+    cursor: grab;
+    padding: 10px;
+    max-width: 120px;
+    width: 100%;
+    justify-self: center; 
+    margin-top: 20px;
 }
 
-.logo {
+.custom-radio input[type="radio"] {
     display: none;
 }
 
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
+.custom-radio .radio-label {
+    display: block;
+    padding: 15px;
     cursor: pointer;
+    background-color: #4D5562;
+    color: #A1A1A9;
+    border: 1px solid #A1A1A9;
+    border-radius: 12px;
+    transition: background-color 0.3s, border-color 0.3s;
+    max-width: 700px;
+    width: 100%;
 }
 
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
+.custom-radio input[type="radio"]:checked + .radio-label {
+    background-color: #652cd1; 
+    border-color: #E5E7EB;
+    color: #E5E7EB;
+}
+.error-border {
+    border: 2px solid red;
 }
 
-.link-title {
-    font-size: 1.125rem;
+ul li {
+    margin-left: 20px;
+}
+.dots i {
+    border: 2px solid transparent;
+    color: #652cd1;
+    margin: 10px;
+    transition: border-color 0.3s;
 }
 
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
+.dots i.active {
+    border-color: #E5E7EB;
+    animation: glow 1s infinite alternate;
 }
 
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
+@keyframes glow {
+    0% {
+        border-color: #E5E7EB;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #E5E7EB;
     }
-
-    .get-started {
-        width: auto;
+    100% {
+        border-color: rgba(132,94,238,1);
+        border-radius: 50%;
+        box-shadow: 0 0 20px #652cd1;
     }
-
-    main {
-        flex-direction: row;
+}
+@media screen and (max-width: 400px) {
+    form {
+        font-size: 12px;
+        padding: 15px
     }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+    form input,
+    .custom-radio .radio-label{
+        padding: 7.5px;
     }
-
-  }
+    form button {
+        max-width: 80px;
+    }
+}
+@media screen and (max-width: 600px) {
+    form {
+        font-size: 14px;
+    }
+    legend {
+        font-size: 16px;
+    }
+}
