@@ -38,7 +38,7 @@ Users should:
 
 ### Screenshot
 
-![Screenshot of form]("/images/2023-10-09 21_30_03-Multi Step Form.png")
+[Screenshot](https://i.imgur.com/9vAOE4r.png)
 
 ### Links
 
